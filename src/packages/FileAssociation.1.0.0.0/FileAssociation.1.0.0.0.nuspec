@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FileAssociation</id>
+    <version>1.0.0.0</version>
+    <title>FileAssociation</title>
+    <authors>BrendanGrant</authors>
+    <owners>BrendanGrant</owners>
+    <licenseUrl>http://opensource.org/licenses/BSD-3-Clause</licenseUrl>
+    <projectUrl>http://www.codeproject.com/Articles/17023/System-File-Association</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An simple library for modifying File Associations from .Net code.</description>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>File Associations Extensions Actions</tags>
+  </metadata>
+</package>

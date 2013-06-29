@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name="FileAssociation NuGet Package" default="build">
+  <description>Builds/Uploads the NuGet Package for the FileAssociation library</description>
+
+  <property name="nuspecversion" value="1.0.0.0" />
+
+  <target name="build" description="Builds the NuGet Package">
+    <exec program="nuget.exe">
+      <arg value="pack" />
+      <arg value="FileAssociation.nuspec" />
+      <arg value="-Verbosity" />
+      <arg value="detailed" />
+    </exec>
+  </target>
+
+  <target name="upload" description="Uploads the NuGet Package to the NuGet Gallery" depends="build">
+    <exec program="nuget.exe">
+      <arg value="push" />
+      <arg value="FileAssociation.${nuspecversion}.nupkg" />
+      <arg value="-Verbosity" />
+      <arg value="detailed" />
+    </exec>
+  </target>
+
+  <target name="clean" description="Cleans any built NuGet packages away">
+    <delete>
+      <fileset>
+        <include name="*.nupkg" />
+      </fileset>
+    </delete>
+  </target>
+</project>
